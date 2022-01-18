@@ -56,7 +56,7 @@ def stock_history_key_ratio_json(request):
         file2.close()
 
 
-        rows_to_keep = [0,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+        rows_to_keep = [0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
     
         df = pd.read_csv ('testy.csv', skiprows = lambda x: x not in rows_to_keep)
         df.replace(',','', regex=True, inplace=True)
