@@ -12,6 +12,7 @@ from json import loads
 import requests
 from time import time
 import glob
+import os
 from django.http import JsonResponse
 
 # Create your views here.
@@ -31,6 +32,7 @@ def get_key_ratio(ticker,market):
 
 def stock_history_key_ratio_json(request):
     if 'ticker' in request.GET and 'market' in request.GET:
+        os.remove("testy.csv")
         html_content = get_key_ratio(request, request)
         csv = html_content.content
 
@@ -39,11 +41,13 @@ def stock_history_key_ratio_json(request):
             file.write(csv)
         file.close()
 
+        header_name = ["name", "year_one", "year_two","year_three","year_four","year_five","year_six","year_seven","year_eigth","year_nine","year_ten","year_ttm","yearsss"]
 
 
         
         file1 = open("testy.csv", "a")
         file2 = open("newcsv.csv", "r")
+        file1.write(",".join(header_name))
 
         for line in file2:
             file1.write(line)
