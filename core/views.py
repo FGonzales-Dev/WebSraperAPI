@@ -66,7 +66,7 @@ def cash_flow_json(request):
             file.write(csv)
         file.close()
 
-        header_name = ["name","year_six","year_seven","eight","year_nine","year_ten","year_ttm","yearsss"]
+        header_name = ["name","year_six","year_seven","year_eight","year_nine","year_ten","year_ttm","yearsss"]
 
 
         
@@ -141,7 +141,7 @@ def stock_history_key_ratio_json(request):
             file.write(csv)
         file.close()
 
-        header_name = ["name", "year_one", "year_two","year_three","year_four","year_five","year_six","year_seven","year_eigth","year_nine","year_ten","year_ttm","yearsss"]
+        header_name = ["name", "year_one", "year_two","year_three","year_four","year_five","year_six","year_seven","year_eight","year_nine","year_ten","year_ttm","yearsss"]
 
 
         
