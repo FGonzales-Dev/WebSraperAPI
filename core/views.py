@@ -57,7 +57,7 @@ def get_stock_cash_flow(ticker,market):
     return screen  
 
 
-def income_statement_json(request):
+def cash_flow_json(request):
     if 'ticker' in request.GET and 'market' in request.GET:
         os.remove("testy.csv")
         html_content = get_stock_cash_flow(request, request)
